@@ -10,8 +10,8 @@ configure do
   # enable :sessions
   set :port, 80
   set :bind, '0.0.0.0'
-  SITE_TITLE = "Routine Manager"
-  SITE_DESCRIPTION = "'Application description"
+  SITE_TITLE = "SBT"
+  SITE_DESCRIPTION = "Sinatra Bootstrap Template"
 end
 
 ['/','/home'].each do |route|
