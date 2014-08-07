@@ -1,0 +1,25 @@
+require 'rubygems'
+require 'sinatra'
+require 'data_mapper'
+require 'sinatra/flash'
+require 'sinatra/redirect_with_flash'
+
+require 'sinatra/reloader'                                # comment out in production
+ 
+configure do
+  # enable :sessions
+  set :port, 80
+  set :bind, '0.0.0.0'
+  SITE_TITLE = "Routine Manager"
+  SITE_DESCRIPTION = "'Application description"
+end
+
+['/','/home'].each do |route|
+  get route do
+    erb :home
+  end
+end
+
+get '/about' do
+  erb :about
+end
