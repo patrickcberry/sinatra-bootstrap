@@ -23,3 +23,11 @@ end
 get '/about' do
   erb :about
 end
+
+not_found do
+  erb :notfound
+end
+
+error do
+  erb :error
+end
